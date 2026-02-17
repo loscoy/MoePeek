@@ -4,7 +4,6 @@ import SwiftUI
 
 /// Content for the menu bar dropdown.
 struct MenuItemView: View {
-    @Default(.hasCompletedOnboarding) private var hasCompletedOnboarding
     @Environment(\.openSettings) private var openSettings
     let appDelegate: AppDelegate
 
@@ -16,13 +15,11 @@ struct MenuItemView: View {
 
         Divider()
 
-        if !hasCompletedOnboarding {
-            Button("显示引导页") {
-                appDelegate.onboardingController?.showWindow()
-            }
-
-            Divider()
+        Button("显示引导页") {
+            appDelegate.onboardingController?.showWindow()
         }
+
+        Divider()
 
         Button("翻译选中文字") {
             guard let coordinator = appDelegate.coordinator,
