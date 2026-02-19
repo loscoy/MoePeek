@@ -18,7 +18,8 @@ final class OnboardingWindowController: NSObject, NSWindowDelegate {
 
     func showWindow() {
         if let window, window.isVisible {
-            window.orderFrontRegardless()
+            NSApp.activate(ignoringOtherApps: true)
+            window.makeKeyAndOrderFront(nil)
             return
         }
 
@@ -45,7 +46,8 @@ final class OnboardingWindowController: NSObject, NSWindowDelegate {
         window.delegate = self
         self.window = window
 
-        window.orderFrontRegardless()
+        NSApp.activate(ignoringOtherApps: true)
+        window.makeKeyAndOrderFront(nil)
     }
 
     func closeWindow() {
