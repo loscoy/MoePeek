@@ -35,11 +35,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         setupShortcuts()
         setupSelectionMonitor()
 
-        // Show onboarding on first launch; otherwise open Settings directly.
-        if !Defaults[.hasCompletedOnboarding] {
-            onboardingController.onComplete = { [weak self] in
-                self?.openSettings()
-            }
+        // Wire onComplete once so every path (first launch + menu bar re-open) behaves consistently.
+        onboardingController.onComplete = { [weak self] in
+            self?.openSettings()
+        }
+
+        // Show onboarding on first launch; skip if permissions already granted.
+        if permissionManager.allPermissionsGranted {
+            Defaults[.hasCompletedOnboarding] = true
+            openSettings()
+        } else if !Defaults[.hasCompletedOnboarding] {
             onboardingController.showWindow()
         } else {
             openSettings()

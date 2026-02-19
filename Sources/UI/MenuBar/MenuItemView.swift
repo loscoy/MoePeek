@@ -64,6 +64,12 @@ struct MenuItemView: View {
         Divider()
 
         Button {
+            appDelegate.onboardingController.showWindow()
+        } label: {
+            Label("引导设置...", systemImage: "questionmark.circle")
+        }
+
+        Button {
             appDelegate.openSettings()
         } label: {
             Label("设置...", systemImage: "gearshape")
