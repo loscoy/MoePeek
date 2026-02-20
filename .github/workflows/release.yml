@@ -81,8 +81,17 @@ jobs:
           ditto -c -k --sequesterRsrc build/app/MoePeek.app \
             "MoePeek-v${{ steps.version.outputs.version }}-macOS.zip"
 
+      - name: Check Sparkle signing key
+        id: sparkle
+        run: |
+          if [ -n "$SPARKLE_KEY" ]; then
+            echo "has_key=true" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          SPARKLE_KEY: ${{ secrets.SPARKLE_ED_PRIVATE_KEY }}
+
       - name: Download Sparkle CLI tools
-        if: ${{ secrets.SPARKLE_ED_PRIVATE_KEY != '' }}
+        if: steps.sparkle.outputs.has_key == 'true'
         run: |
           SPARKLE_VERSION=$(python3 -c "import json; pins=json.load(open('Package.resolved'))['pins']; print(next(p['state']['version'] for p in pins if p['identity']=='sparkle'))")
           echo "Using Sparkle CLI v${SPARKLE_VERSION} (from Package.resolved)"
@@ -104,7 +113,7 @@ jobs:
             || test $? -eq 1
 
       - name: Generate appcast
-        if: ${{ secrets.SPARKLE_ED_PRIVATE_KEY != '' }}
+        if: steps.sparkle.outputs.has_key == 'true'
         env:
           SPARKLE_ED_PRIVATE_KEY: ${{ secrets.SPARKLE_ED_PRIVATE_KEY }}
         run: |
