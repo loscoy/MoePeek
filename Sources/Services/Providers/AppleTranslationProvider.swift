@@ -102,6 +102,7 @@ struct AppleTranslationProvider: TranslationProvider {
                     let bridge = TranslationBridgeView(text: text, configuration: config) { result in
                         continuation.resume(with: result)
                         Task { @MainActor in
+                            window.contentView = nil
                             window.close()
                         }
                     }
@@ -113,7 +114,9 @@ struct AppleTranslationProvider: TranslationProvider {
             }
         } onCancel: {
             Task { @MainActor in
+                windowRef.value?.contentView = nil
                 windowRef.value?.close()
+                windowRef.value = nil
             }
         }
     }

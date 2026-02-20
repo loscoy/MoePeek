@@ -45,7 +45,8 @@ final class PopupDismissMonitor {
                 Task { @MainActor in
                     self.onDismiss()
                 }
-            } else if !self.panel.contentView!.frame.contains(clickLocation) {
+            } else if let contentView = self.panel.contentView,
+                      !contentView.frame.contains(clickLocation) {
                 Task { @MainActor in
                     self.onDismiss()
                 }

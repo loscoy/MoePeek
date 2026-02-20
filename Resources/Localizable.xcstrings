@@ -1,783 +1,1237 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "auto": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "自动" }
+  "sourceLanguage" : "en",
+  "strings" : {
+    "↵ Translate · ⇧↵ Newline" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "↵ 翻译 · ⇧↵ 换行"
+          }
         }
       }
     },
-    "Accessibility permission not granted. Open Settings to enable it.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "辅助功能权限未授权。请前往设置中开启。" }
+    "About" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于"
+          }
         }
       }
     },
-    "No text selected. Select some text and try again.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "没有选中文字。请选中一些文字后重试。" }
+    "Accessibility Permission" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辅助功能权限"
+          }
         }
       }
     },
-    "OCR failed: %@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "OCR 失败：%@" }
+    "Accessibility permission not granted. Open Settings to enable it." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "辅助功能权限未授权。请前往设置中开启。"
+          }
         }
       }
     },
-    "Clipboard is empty. Copy some text first.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "剪贴板为空，请先复制一些文字。" }
+    "API Configuration" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 配置"
+          }
         }
       }
     },
-    "Empty text": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "文本为空" }
+    "API error (%lld): %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 错误（%lld）：%@"
+          }
         }
       }
     },
-    "No providers enabled. Enable at least one in Settings.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "没有启用翻译服务。请在设置中至少启用一个。" }
+    "API Key" : {
+
+    },
+    "API key not configured. Go to Settings to set it up." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API Key 未配置。请前往设置进行配置。"
+          }
+        }
+      }
+    },
+    "Apple Translation Language Packs" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Translation 语言包"
+          }
         }
       }
     },
-    "Invalid API URL": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "无效的 API URL" }
+    "Apple Translation requires language packs for offline translation.\nSelect a language pair and download, or do it later in Settings." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple Translation 需要下载语言包才能离线翻译。\n选择常用语言对并下载，或稍后在设置中下载。"
+          }
         }
       }
     },
-    "Invalid response from server": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "服务器返回了无效的响应" }
+    "auto" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动"
+          }
         }
       }
     },
-    "API key not configured. Go to Settings to set it up.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "API Key 未配置。请前往设置进行配置。" }
+    "Auto Detect" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动检测"
+          }
         }
       }
     },
-    "API error (%lld): %@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "API 错误（%lld）：%@" }
+    "Auto-detect source language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动检测源语言"
+          }
         }
       }
     },
-    "Translation returned empty result": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "翻译返回了空结果" }
+    "Auto-translate selected text" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选中文字自动翻译"
+          }
         }
       }
     },
-    "Language pack not downloaded (%@ → %@). Download it in Settings or try another provider.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "语言包未下载（%1$@ → %2$@）。请在设置中下载或尝试其他翻译服务。" }
+    "Automatically check for updates" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动检查更新"
+          }
         }
       }
     },
-    "Language pair not supported (%@ → %@). Try another provider.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "不支持该语言对（%1$@ → %2$@）。请尝试其他翻译服务。" }
+    "Available on this system (macOS 15+). No API key needed." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此系统上可用（macOS 15+），无需 API Key。"
+          }
         }
       }
+    },
+    "Base URL" : {
+
     },
-    "Translation session ended unexpectedly. Please try again.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "翻译会话意外结束。请重试。" }
+    "Begin Setup" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始设置"
+          }
         }
       }
     },
-    "Screen capture was cancelled": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "截图已取消" }
+    "Built-in system translation, no API Key needed (macOS 15+)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统内置翻译，无需 API Key（macOS 15+）"
+          }
         }
       }
     },
-    "No image found in clipboard after capture": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "截图后未在剪贴板中找到图像" }
+    "Check & Download" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查并下载"
+          }
         }
       }
     },
-    "No text was recognized in the captured image": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "未在截取的图像中识别到文字" }
+    "Check for Updates..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新..."
+          }
         }
       }
     },
-    "OpenAI-compatible API, requires API Key": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "OpenAI 兼容 API，需要配置 API Key" }
+    "Checking…" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查中…"
+          }
         }
       }
     },
-    "Built-in system translation, no API Key needed (macOS 15+)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "系统内置翻译，无需 API Key（macOS 15+）" }
+    "Choose a provider from the list to configure it." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从列表中选择一个翻译服务进行配置。"
+          }
         }
       }
     },
-    "Auto Detect": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "自动检测" }
+    "Clipboard is empty. Copy some text first." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剪贴板为空，请先复制一些文字。"
+          }
         }
       }
     },
-    "Checking…": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "检查中…" }
+    "Clipboard Translation" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剪贴翻译"
+          }
         }
       }
     },
-    "Installed": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "已安装" }
+    "Clipboard Translation:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剪贴翻译："
+          }
         }
       }
     },
-    "Needs download": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "需要下载" }
+    "Community Discussions" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "社区讨论"
+          }
         }
       }
     },
-    "Unsupported": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "不支持" }
+    "Configure OpenAI API" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配置 OpenAI API"
+          }
         }
       }
     },
-    "Unknown": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "未知" }
+    "Connection successful (%lldms)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "连接成功 (%lldms)"
+          }
         }
       }
     },
-    "Previous": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "上一步" }
+    "Copy" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制"
+          }
         }
       }
     },
-    "Begin Setup": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "开始设置" }
+    "Copyright © 2025-2026 MoePeek. All rights reserved." : {
+
+    },
+    "Default Height: %lld" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认高度：%lld"
+          }
         }
       }
     },
-    "Next": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "下一步" }
+    "Default Width: %lld" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认宽度：%lld"
+          }
         }
       }
     },
-    "Skip": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "跳过" }
+    "Detection Sensitivity: %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检测灵敏度：%@"
+          }
         }
       }
     },
-    "Get Started": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "开始使用" }
+    "Empty text" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文本为空"
+          }
         }
       }
     },
-    "Menu Bar Translation Tool": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "菜单栏翻译工具" }
+    "Enable at least one translation service.\nYou can enable multiple services for comparison." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "至少启用一个翻译服务才能使用翻译功能。\n你可以同时启用多个服务进行对比。"
+          }
         }
       }
     },
-    "The following permissions are required.\nWe'll guide you through the setup.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "需要以下权限才能正常工作，\n接下来将引导你逐步完成设置。" }
+    "Enter your API configuration to use the OpenAI translation service.\nYou can also configure this later in Settings." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "输入 API 配置以使用 OpenAI 翻译服务。\n你也可以稍后在设置中配置。"
+          }
         }
       }
     },
-    "Accessibility Permission": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "辅助功能权限" }
+    "Fetch available models" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "获取可用模型列表"
+          }
         }
       }
     },
-    "MoePeek needs accessibility permission to read your selected text. This is essential for text selection translation.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "MoePeek 需要辅助功能权限来读取你选中的文本，这是划词翻译的核心功能。" }
+    "From:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "源语言："
+          }
         }
       }
     },
-    "Screen Recording Permission": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "屏幕录制权限" }
+    "General" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
         }
       }
     },
-    "MoePeek needs screen recording permission for OCR screenshot translation to recognize text on screen.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "MoePeek 需要屏幕录制权限来进行 OCR 截图翻译，识别屏幕上的文字。" }
+    "Get Started" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始使用"
+          }
         }
       }
     },
-    "Select Translation Service": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "选择翻译服务" }
+    "Grabbing text…" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在获取文字…"
+          }
         }
       }
     },
-    "Enable at least one translation service.\nYou can enable multiple services for comparison.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "至少启用一个翻译服务才能使用翻译功能。\n你可以同时启用多个服务进行对比。" }
+    "Granted" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已授权"
+          }
         }
       }
     },
-    "Please select at least one translation service": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "请至少选择一个翻译服务" }
+    "Installed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已安装"
+          }
         }
       }
     },
-    "Configure OpenAI API": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "配置 OpenAI API" }
+    "Invalid API URL" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无效的 API URL"
+          }
         }
       }
     },
-    "Enter your API configuration to use the OpenAI translation service.\nYou can also configure this later in Settings.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "输入 API 配置以使用 OpenAI 翻译服务。\n你也可以稍后在设置中配置。" }
+    "Invalid response" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无效的响应"
+          }
         }
       }
     },
-    "Apple Translation Language Packs": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "Apple Translation 语言包" }
+    "Invalid response format" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "响应格式不正确"
+          }
         }
       }
     },
-    "Apple Translation requires language packs for offline translation.\nSelect a language pair and download, or do it later in Settings.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "Apple Translation 需要下载语言包才能离线翻译。\n选择常用语言对并下载，或稍后在设置中下载。" }
+    "Invalid response from server" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务器返回了无效的响应"
+          }
         }
       }
     },
-    "Granted": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "已授权" }
+    "Issue Feedback" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "问题反馈"
+          }
         }
       }
     },
-    "Open System Settings": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "打开系统设置" }
+    "Keyboard Shortcuts" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快捷键"
+          }
         }
       }
     },
-    "Status updates automatically after granting": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "授权后状态会自动更新" }
+    "Language Detection" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言检测"
+          }
         }
       }
     },
-    "Source Language": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "源语言" }
+    "Language pack not downloaded (%@ → %@). Download it in Settings or try another provider." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言包未下载（%1$@ → %2$@）。请在设置中下载或尝试其他翻译服务。"
+          }
         }
       }
     },
-    "Target Language": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "目标语言" }
+    "Language Packs" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "语言包"
+          }
         }
       }
     },
-    "Check & Download": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "检查并下载" }
+    "Language pair not supported (%@ → %@). Try another provider." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不支持该语言对（%1$@ → %2$@）。请尝试其他翻译服务。"
+          }
         }
       }
     },
-    "Open Settings": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "打开设置" }
+    "Launch at Login" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录时启动"
+          }
         }
       }
+    },
+    "Licensed under AGPL-3.0" : {
+
     },
-    "Keyboard Shortcuts": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "快捷键" }
+    "Lower = more aggressive detection (may be inaccurate); Higher = more conservative (may return unknown)" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "较低 = 更积极检测（可能不准）；较高 = 更保守（可能返回未知）"
+          }
         }
       }
     },
-    "Selection Translation:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "选中翻译：" }
+    "Manual Translation" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手动翻译"
+          }
         }
       }
     },
-    "Screenshot OCR:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "截图 OCR：" }
+    "Manual Translation:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "手动翻译："
+          }
         }
       }
     },
-    "Manual Translation:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "手动翻译：" }
+    "Menu Bar Translation Tool" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏翻译工具"
+          }
         }
       }
+    },
+    "Model" : {
+
+    },
+    "MoePeek" : {
+
+    },
+    "MoePeek %@" : {
+
     },
-    "Clipboard Translation:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "剪贴翻译：" }
+    "MoePeek needs accessibility permission to read your selected text. This is essential for text selection translation." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MoePeek 需要辅助功能权限来读取你选中的文本，这是划词翻译的核心功能。"
+          }
         }
       }
     },
-    "General": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "通用" }
+    "MoePeek needs screen recording permission for OCR screenshot translation to recognize text on screen." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MoePeek 需要屏幕录制权限来进行 OCR 截图翻译，识别屏幕上的文字。"
+          }
         }
       }
     },
-    "Target Language:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "目标语言：" }
+    "Needs download" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要下载"
+          }
         }
       }
     },
-    "Auto-translate selected text": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "选中文字自动翻译" }
+    "Network error: %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "网络错误：%@"
+          }
         }
       }
     },
-    "Launch at Login": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "登录时启动" }
+    "Next" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一步"
+          }
         }
       }
     },
-    "Show Dock icon": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "在程序坞中显示图标" }
+    "No image found in clipboard after capture" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截图后未在剪贴板中找到图像"
+          }
         }
       }
     },
-    "Language Detection": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "语言检测" }
+    "No Preference" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无偏好"
+          }
         }
       }
     },
-    "Auto-detect source language": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "自动检测源语言" }
+    "No providers enabled. Enable at least one in Settings." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有启用翻译服务。请在设置中至少启用一个。"
+          }
         }
       }
     },
-    "Preferred Source Language:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "偏好源语言：" }
+    "No text selected. Select some text and try again." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有选中文字。请选中一些文字后重试。"
+          }
         }
       }
     },
-    "No Preference": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "无偏好" }
+    "No text was recognized in the captured image" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未在截取的图像中识别到文字"
+          }
         }
       }
     },
-    "Detection Sensitivity: %@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "检测灵敏度：%@" }
+    "OCR failed: %@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OCR 失败：%@"
+          }
         }
       }
     },
-    "Lower = more aggressive detection (may be inaccurate); Higher = more conservative (may return unknown)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "较低 = 更积极检测（可能不准）；较高 = 更保守（可能返回未知）" }
+    "Onboarding Guide..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "引导设置..."
+          }
         }
       }
     },
-    "Source Language:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "源语言：" }
+    "Open Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
+          }
         }
       }
     },
-    "Popup Panel": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "弹出面板" }
+    "Open System Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开系统设置"
+          }
         }
       }
     },
-    "Default Width: %lld": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "默认宽度：%lld" }
+    "OpenAI-compatible API, requires API Key" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OpenAI 兼容 API，需要配置 API Key"
+          }
         }
       }
     },
-    "Default Height: %lld": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "默认高度：%lld" }
+    "Please enter a valid Base URL (starting with http:// or https://) and API Key" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请填写有效的 Base URL（需以 http:// 或 https:// 开头）和 API Key"
+          }
         }
       }
     },
-    "Manual Translation": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "手动翻译" }
+    "Please fill in the complete configuration (URL must start with http:// or https://)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请填写完整的配置信息（URL 需以 http:// 或 https:// 开头）"
+          }
         }
       }
     },
-    "Screenshot OCR": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "截图 OCR" }
+    "Please select at least one translation service" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请至少选择一个翻译服务"
+          }
         }
       }
     },
-    "Selection Translation": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "选中翻译" }
+    "Popup Panel" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "弹出面板"
+          }
         }
       }
     },
-    "Clipboard Translation": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "剪贴翻译" }
+    "Preferred Source Language:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "偏好源语言："
+          }
         }
       }
     },
-    "Onboarding Guide...": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "引导设置..." }
+    "Previous" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一步"
+          }
         }
       }
     },
-    "Settings...": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "设置..." }
+    "Providers" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻译服务"
+          }
         }
       }
     },
-    "Quit MoePeek": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "退出 MoePeek" }
+    "Quit MoePeek" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出 MoePeek"
+          }
         }
       }
     },
-    "Check for Updates...": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "检查更新..." }
+    "Request build failed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请求构建失败"
+          }
         }
       }
     },
-    "Automatically check for updates": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "自动检查更新" }
+    "Request failed (%lld)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请求失败 (%lld)"
+          }
         }
       }
     },
-    "Issue Feedback": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "问题反馈" }
+    "Retry" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试"
+          }
         }
       }
     },
-    "Community Discussions": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "社区讨论" }
+    "Screen capture was cancelled" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截图已取消"
+          }
         }
       }
     },
-    "Grabbing text…": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "正在获取文字…" }
+    "Screen Recording Permission" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏幕录制权限"
+          }
         }
       }
     },
-    "Waiting…": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "等待中…" }
+    "Screenshot OCR" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截图 OCR"
+          }
         }
       }
     },
-    "Translating…": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "翻译中…" }
+    "Screenshot OCR:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "截图 OCR："
+          }
         }
       }
     },
-    "Copy": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "复制" }
+    "Select a provider" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择翻译服务"
+          }
         }
       }
     },
-    "Retry": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "重试" }
+    "Select Translation Service" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择翻译服务"
+          }
         }
       }
     },
-    "↵ Translate · ⇧↵ Newline": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "↵ 翻译 · ⇧↵ 换行" }
+    "Selection Translation" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选中翻译"
+          }
         }
       }
     },
-    "Providers": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "翻译服务" }
+    "Selection Translation:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选中翻译："
+          }
         }
       }
     },
-    "Select a provider": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "选择翻译服务" }
+    "Services" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务"
+          }
         }
       }
     },
-    "Choose a provider from the list to configure it.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "从列表中选择一个翻译服务进行配置。" }
+    "Settings..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置..."
+          }
         }
       }
     },
-    "Services": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "服务" }
+    "Show Dock icon" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在程序坞中显示图标"
+          }
         }
       }
     },
-    "About": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "关于" }
+    "Skip" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过"
+          }
         }
       }
     },
-    "Use {targetLang} as a placeholder for the target language.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "使用 {targetLang} 作为目标语言的占位符。" }
+    "Source Language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "源语言"
+          }
         }
       }
     },
-    "Status": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "状态" }
+    "Source Language:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "源语言："
+          }
         }
       }
     },
-    "Available on this system (macOS 15+). No API key needed.": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "在此系统上可用（macOS 15+），无需 API Key。" }
+    "Status" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "状态"
+          }
         }
       }
     },
-    "Language Packs": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "语言包" }
+    "Status updates automatically after granting" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "授权后状态会自动更新"
+          }
         }
       }
     },
-    "From:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "源语言：" }
+    "System Prompt" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统提示词"
+          }
         }
       }
     },
-    "To:": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "目标语言：" }
+    "Target Language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目标语言"
+          }
         }
       }
     },
-    "Please enter a valid Base URL (starting with http:// or https://) and API Key": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "请填写有效的 Base URL（需以 http:// 或 https:// 开头）和 API Key" }
+    "Target Language:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目标语言："
+          }
         }
       }
     },
-    "Invalid response": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "无效的响应" }
+    "Test Connection" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "测试连接"
+          }
         }
       }
     },
-    "Request failed (%lld)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "请求失败 (%lld)" }
+    "The following permissions are required.\nWe'll guide you through the setup." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要以下权限才能正常工作，\n接下来将引导你逐步完成设置。"
+          }
         }
       }
     },
-    "Invalid response format": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "响应格式不正确" }
+    "To:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目标语言："
+          }
         }
       }
     },
-    "Network error: %@": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "网络错误：%@" }
+    "Translating…" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻译中…"
+          }
         }
       }
     },
-    "Please fill in the complete configuration (URL must start with http:// or https://)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "请填写完整的配置信息（URL 需以 http:// 或 https:// 开头）" }
+    "Translation returned empty result" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻译返回了空结果"
+          }
         }
       }
     },
-    "Request build failed": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "请求构建失败" }
+    "Translation session ended unexpectedly. Please try again." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻译会话意外结束。请重试。"
+          }
         }
       }
     },
-    "Fetch available models": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "获取可用模型列表" }
+    "Unknown" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未知"
+          }
         }
       }
     },
-    "Test Connection": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "测试连接" }
+    "Unsupported" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不支持"
+          }
         }
       }
     },
-    "Connection successful (%lldms)": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "连接成功 (%lldms)" }
+    "Use {targetLang} as a placeholder for the target language." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用 {targetLang} 作为目标语言的占位符。"
+          }
         }
       }
     },
-    "API Configuration": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "API 配置" }
+    "Version %@ (%@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Version %1$@ (%2$@)"
+          }
         }
       }
     },
-    "System Prompt": {
-      "localizations": {
-        "zh-Hans": {
-          "stringUnit": { "state": "translated", "value": "系统提示词" }
+    "Waiting…" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待中…"
+          }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

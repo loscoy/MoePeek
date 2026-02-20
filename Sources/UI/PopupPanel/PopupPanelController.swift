@@ -56,7 +56,7 @@ final class PopupPanelController {
         dismissMonitor?.stop()
         dismissMonitor = nil
         panel?.contentView = nil
-        panel?.orderOut(nil)
+        panel?.close()
         // Recreate panel on next show to ensure a fresh SwiftUI view tree,
         // avoiding stale @Observable state from previous translation sessions.
         panel = nil

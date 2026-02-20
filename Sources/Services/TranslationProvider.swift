@@ -41,11 +41,11 @@ enum TranslationError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidURL: String(localized: "Invalid API URL")
-        case .invalidResponse: String(localized: "Invalid response from server")
-        case .missingAPIKey: String(localized: "API key not configured. Go to Settings to set it up.")
-        case let .apiError(code, msg): String(localized: "API error (\(code)): \(msg)")
-        case .emptyResult: String(localized: "Translation returned empty result")
+        case .invalidURL: return String(localized: "Invalid API URL")
+        case .invalidResponse: return String(localized: "Invalid response from server")
+        case .missingAPIKey: return String(localized: "API key not configured. Go to Settings to set it up.")
+        case let .apiError(code, msg): return String(localized: "API error (\(code)): \(msg)")
+        case .emptyResult: return String(localized: "Translation returned empty result")
         case let .languageNotInstalled(src, tgt):
             let source = src ?? String(localized: "auto")
             return String(localized: "Language pack not downloaded (\(source) → \(tgt)). Download it in Settings or try another provider.")
@@ -53,7 +53,7 @@ enum TranslationError: LocalizedError {
             let source = src ?? String(localized: "auto")
             return String(localized: "Language pair not supported (\(source) → \(tgt)). Try another provider.")
         case .translationSessionFailed:
-            String(localized: "Translation session ended unexpectedly. Please try again.")
+            return String(localized: "Translation session ended unexpectedly. Please try again.")
         }
     }
 }

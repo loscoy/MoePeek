@@ -215,6 +215,8 @@ final class TranslationCoordinator {
         to targetLang: String
     ) async {
         defer {
+            // Only clean up if not cancelled: when retryProvider() replaces a task,
+            // the cancelled old task must not remove the new task's dictionary entry.
             if !Task.isCancelled {
                 activeTasks.removeValue(forKey: provider.id)
             }

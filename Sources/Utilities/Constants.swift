@@ -1,4 +1,5 @@
 import Defaults
+import Foundation
 import KeyboardShortcuts
 
 // MARK: - Supported Languages
