@@ -15,6 +15,10 @@ struct OnboardingView: View {
     @State private var currentPageIndex = 0
     @State private var apiKey: String = ""
 
+    private var openaiProvider: OpenAICompatibleProvider? {
+        registry.providers.first { $0.id == "openai" } as? OpenAICompatibleProvider
+    }
+
     private enum Page: Equatable {
         case welcome, accessibility, screenRecording
         case providerSelection, openaiSetup, appleTranslation
@@ -22,7 +26,7 @@ struct OnboardingView: View {
 
     private var pages: [Page] {
         var result: [Page] = [.welcome, .accessibility, .screenRecording, .providerSelection]
-        if enabledProviders.contains("openai") {
+        if enabledProviders.contains("openai"), openaiProvider != nil {
             result.append(.openaiSetup)
         }
         #if canImport(Translation)
@@ -308,33 +312,18 @@ struct OnboardingView: View {
             Text("配置 OpenAI API")
                 .font(.title2.bold())
 
-            Text("输入你的 API Key 以使用 OpenAI 翻译服务。\n你也可以稍后在设置中配置。")
+            Text("输入 API 配置以使用 OpenAI 翻译服务。\n你也可以稍后在设置中配置。")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
 
-            VStack(alignment: .leading, spacing: 8) {
-                Text("API Key")
-                    .font(.subheadline.bold())
-
-                SecureField("sk-...", text: $apiKey)
-                    .textFieldStyle(.roundedBorder)
-                    .onChange(of: apiKey) { _, newValue in
-                        let keychainKey = "provider.openai.apiKey"
-                        if newValue.isEmpty {
-                            KeychainHelper.delete(key: keychainKey)
-                        } else {
-                            KeychainHelper.save(key: keychainKey, value: newValue)
-                        }
-                    }
+            if let provider = openaiProvider {
+                OpenAIConfigFields(provider: provider, apiKey: $apiKey)
+                    .padding(.horizontal, 32)
             }
-            .padding(.horizontal, 32)
 
             Spacer()
-        }
-        .onAppear {
-            apiKey = KeychainHelper.load(key: "provider.openai.apiKey") ?? ""
         }
     }
 
