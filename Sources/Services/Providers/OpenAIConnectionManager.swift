@@ -26,7 +26,7 @@ final class OpenAIConnectionManager {
     func fetchModels(baseURL: String, apiKey: String) async {
         guard !isFetchingModels else { return }
         guard let url = validatedURL(base: baseURL, path: "/models", apiKey: apiKey) else {
-            modelFetchError = "请填写有效的 Base URL（需以 http:// 或 https:// 开头）和 API Key"
+            modelFetchError = String(localized: "Please enter a valid Base URL (starting with http:// or https://) and API Key")
             return
         }
 
@@ -41,19 +41,19 @@ final class OpenAIConnectionManager {
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let httpResponse = response as? HTTPURLResponse else {
-                modelFetchError = "无效的响应"
+                modelFetchError = String(localized: "Invalid response")
                 return
             }
             guard httpResponse.statusCode == 200 else {
-                modelFetchError = "请求失败 (\(httpResponse.statusCode))"
+                modelFetchError = String(localized: "Request failed (\(httpResponse.statusCode))")
                 return
             }
             let decoded = try JSONDecoder().decode(ModelsResponse.self, from: data)
             fetchedModels = decoded.data.map(\.id).sorted()
         } catch is DecodingError {
-            modelFetchError = "响应格式不正确"
+            modelFetchError = String(localized: "Invalid response format")
         } catch {
-            modelFetchError = "网络错误: \(error.localizedDescription)"
+            modelFetchError = String(localized: "Network error: \(error.localizedDescription)")
         }
     }
 
@@ -61,7 +61,7 @@ final class OpenAIConnectionManager {
         guard !isTestingConnection else { return }
         guard !model.isEmpty,
               let url = validatedURL(base: baseURL, path: "/chat/completions", apiKey: apiKey) else {
-            testResult = .failure(message: "请填写完整的配置信息（URL 需以 http:// 或 https:// 开头）")
+            testResult = .failure(message: String(localized: "Please fill in the complete configuration (URL must start with http:// or https://)"))
             return
         }
 
@@ -87,7 +87,7 @@ final class OpenAIConnectionManager {
         do {
             request.httpBody = try JSONSerialization.data(withJSONObject: body)
         } catch {
-            testResult = .failure(message: "请求构建失败")
+            testResult = .failure(message: String(localized: "Request build failed"))
             return
         }
 
@@ -97,7 +97,7 @@ final class OpenAIConnectionManager {
             let ms = Int((ContinuousClock.now - start) / .milliseconds(1))
 
             guard let httpResponse = response as? HTTPURLResponse else {
-                testResult = .failure(message: "无效的响应")
+                testResult = .failure(message: String(localized: "Invalid response"))
                 return
             }
             guard httpResponse.statusCode == 200 else {

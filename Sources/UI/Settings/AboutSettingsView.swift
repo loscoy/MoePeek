@@ -40,12 +40,12 @@ struct AboutSettingsView: View {
                     .padding(.horizontal, 40)
 
                 HStack(spacing: 16) {
-                    Button("检查更新...") {
+                    Button("Check for Updates...") {
                         updater.checkForUpdates()
                     }
                     .disabled(!updater.canCheckForUpdates)
 
-                    Toggle("自动检查更新", isOn: $updater.automaticallyChecksForUpdates)
+                    Toggle("Automatically check for updates", isOn: $updater.automaticallyChecksForUpdates)
                 }
             }
 
@@ -53,12 +53,12 @@ struct AboutSettingsView: View {
 
             HStack(spacing: 16) {
                 Link(destination: URL(string: "https://github.com/yusixian/MoePeek/issues")!) {
-                    Label("问题反馈", systemImage: "ladybug")
+                    Label("Issue Feedback", systemImage: "ladybug")
                 }
                 .buttonStyle(.link)
 
                 Link(destination: URL(string: "https://github.com/yusixian/MoePeek/discussions")!) {
-                    Label("社区讨论", systemImage: "bubble.left.and.bubble.right")
+                    Label("Community Discussions", systemImage: "bubble.left.and.bubble.right")
                 }
                 .buttonStyle(.link)
             }

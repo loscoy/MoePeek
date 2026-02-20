@@ -41,17 +41,19 @@ enum TranslationError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidURL: "Invalid API URL"
-        case .invalidResponse: "Invalid response from server"
-        case .missingAPIKey: "API key not configured. Go to Settings to set it up."
-        case let .apiError(code, msg): "API error (\(code)): \(msg)"
-        case .emptyResult: "Translation returned empty result"
+        case .invalidURL: String(localized: "Invalid API URL")
+        case .invalidResponse: String(localized: "Invalid response from server")
+        case .missingAPIKey: String(localized: "API key not configured. Go to Settings to set it up.")
+        case let .apiError(code, msg): String(localized: "API error (\(code)): \(msg)")
+        case .emptyResult: String(localized: "Translation returned empty result")
         case let .languageNotInstalled(src, tgt):
-            "Language pack not downloaded (\(src ?? "auto") → \(tgt)). Download it in Settings or try another provider."
+            let source = src ?? String(localized: "auto")
+            return String(localized: "Language pack not downloaded (\(source) → \(tgt)). Download it in Settings or try another provider.")
         case let .languageUnsupported(src, tgt):
-            "Language pair not supported (\(src ?? "auto") → \(tgt)). Try another provider."
+            let source = src ?? String(localized: "auto")
+            return String(localized: "Language pair not supported (\(source) → \(tgt)). Try another provider.")
         case .translationSessionFailed:
-            "Translation session ended unexpectedly. Please try again."
+            String(localized: "Translation session ended unexpectedly. Please try again.")
         }
     }
 }

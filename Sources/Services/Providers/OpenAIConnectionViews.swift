@@ -29,7 +29,7 @@ struct ModelFetchAccessory: View {
             }
             .buttonStyle(.borderless)
             .disabled(apiKey.isEmpty || baseURL.isEmpty)
-            .help("获取可用模型列表")
+            .help("Fetch available models")
         }
     }
 }
@@ -46,7 +46,7 @@ struct ConnectionTestView: View {
             Button {
                 Task { await connectionManager.testConnection(baseURL: baseURL, apiKey: apiKey, model: model) }
             } label: {
-                Label("测试连接", systemImage: "bolt.horizontal")
+                Label("Test Connection", systemImage: "bolt.horizontal")
             }
             .disabled(apiKey.isEmpty || baseURL.isEmpty || model.isEmpty || connectionManager.isTestingConnection)
 
@@ -58,7 +58,7 @@ struct ConnectionTestView: View {
             if let result = connectionManager.testResult {
                 switch result {
                 case .success(let latencyMs):
-                    Label("连接成功 (\(latencyMs)ms)", systemImage: "checkmark.circle.fill")
+                    Label("Connection successful (\(latencyMs)ms)", systemImage: "checkmark.circle.fill")
                         .foregroundStyle(.green)
                         .font(.caption)
                 case .failure(let message):

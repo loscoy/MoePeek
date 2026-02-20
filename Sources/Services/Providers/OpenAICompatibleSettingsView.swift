@@ -9,15 +9,15 @@ struct OpenAICompatibleSettingsView: View {
 
     var body: some View {
         Form {
-            Section("API 配置") {
+            Section("API Configuration") {
                 OpenAIConfigFields(provider: provider, apiKey: $apiKey)
             }
 
-            Section("系统提示词") {
+            Section("System Prompt") {
                 TextEditor(text: Defaults.binding(provider.systemPromptKey))
                     .font(.system(.body, design: .monospaced))
                     .frame(height: 80)
-                Text("使用 {targetLang} 作为目标语言占位符。")
+                Text("Use {targetLang} as a placeholder for the target language.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
