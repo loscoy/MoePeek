@@ -71,6 +71,13 @@ struct MenuItemView: View {
         }
 
         Button {
+            appDelegate.updaterController.checkForUpdates()
+        } label: {
+            Label("检查更新...", systemImage: "arrow.triangle.2.circlepath")
+        }
+        .disabled(!appDelegate.updaterController.canCheckForUpdates)
+
+        Button {
             openSettings()
         } label: {
             Label("设置...", systemImage: "gearshape")
