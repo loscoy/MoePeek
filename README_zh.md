@@ -110,6 +110,10 @@ MoePeek 的诞生受到了 [Easydict](https://github.com/tisfeng/Easydict) 和 [
 - [Defaults](https://github.com/sindresorhus/Defaults) — Sindre Sorhus
 - [Sparkle](https://sparkle-project.org/) — 自动更新
 
+## 赞助
+
+<a href="https://afdian.com/a/cosyu"><img width="20%" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.jpg" alt="在爱发电上赞助"></a>
+
 ## 许可证
 
 [AGPL-3.0](LICENSE)

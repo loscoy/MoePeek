@@ -110,6 +110,10 @@ Built with:
 - [Defaults](https://github.com/sindresorhus/Defaults) by Sindre Sorhus
 - [Sparkle](https://sparkle-project.org/) for auto-updates
 
+## Sponsor
+
+<a href="https://afdian.com/a/cosyu"><img width="20%" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.jpg" alt="Sponsor on Afdian"></a>
+
 ## License
 
 [AGPL-3.0](LICENSE)
