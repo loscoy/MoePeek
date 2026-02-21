@@ -5,7 +5,7 @@
 <h1 align="center">MoePeek</h1>
 
 <p align="center">
-  A lightweight, native macOS translation utility that lives in your menu bar.
+  A lightweight, native macOS menu bar translator. Select text, get translation.
 </p>
 
 <p align="center">
@@ -13,6 +13,8 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/cosZone/MoePeek/releases/latest"><img src="https://img.shields.io/github/v/release/cosZone/MoePeek" alt="GitHub Release" /></a>
+  <a href="https://github.com/cosZone/MoePeek/releases"><img src="https://img.shields.io/github/downloads/cosZone/MoePeek/total" alt="Downloads" /></a>
   <img src="https://img.shields.io/badge/platform-macOS%2014%2B-blue" alt="Platform" />
   <img src="https://img.shields.io/badge/swift-6.0-orange" alt="Swift" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-green" alt="License" /></a>
@@ -20,26 +22,40 @@
 
 ## Features
 
+**Translation Modes**
+
 - **Select & Translate** — Select text in any app, get instant translation in a floating panel
-- **OCR Translation** — Capture a screen region and translate the recognized text
+- **OCR Screenshot** — Capture a screen region and translate the recognized text
 - **Clipboard Translation** — Translate whatever's on your clipboard
 - **Manual Input** — Type or paste text to translate on demand
-- **Multiple Providers** — OpenAI-compatible APIs and Apple Translation (macOS 15+, offline)
-- **Smart Language Detection** — Automatically detects source language across 14 languages
-- **Non-activating Panels** — Floating windows that never steal focus from your current app
-- **3-tier Text Grabbing** — Accessibility API → AppleScript → Clipboard fallback chain
-- **Custom Shortcuts** — Fully configurable keyboard shortcuts for every action
-- **Auto Updates** — Built-in Sparkle updater keeps you on the latest version
+
+**Built-in Translation Services**
+
+| Free | API | LLM | System |
+|------|-----|-----|--------|
+| Google Translate | DeepL | OpenAI | Apple Translation |
+| Bing Translate | Baidu | DeepSeek | *(macOS 15+, on-device)* |
+| | NiuTrans | 智谱 GLM | |
+| | Caiyun | Ollama (local) | |
+
+**And More**
+
+- Smart language detection across 14 languages, auto-flips translation direction
+- Non-activating floating panels that never steal focus from your current app
+- 3-tier text grabbing: Accessibility API → AppleScript → Clipboard fallback
+- Fully customizable keyboard shortcuts
+- Built-in auto-updater via Sparkle
 
 ## Why MoePeek
 
-- **Fully native** — Built with Swift, SwiftUI, and AppKit. No Electron, no WebView, no runtime overhead.
-- **Stays light** — Minimal memory footprint, stable over long-running sessions.
-- **Privacy-conscious** — Apple Translation runs entirely on-device. API keys are stored in macOS Keychain.
+- **~5 MB app size** — Pure Swift 6, only 3 dependencies. No Electron, no WebView.
+- **~50 MB background memory** — Systematic memory leak prevention for long-running sessions.
+- **Privacy-friendly** — Apple Translation runs entirely on-device. API keys stored in macOS Keychain.
+- **Open source** — AGPL-3.0 licensed. Issues and feedback welcome.
 
 ## Installation
 
-Download the latest `.dmg` or `.zip` from [GitHub Releases](https://github.com/yusixian/MoePeek/releases) and drag `MoePeek.app` into `/Applications`.
+Download the latest `.dmg` or `.zip` from [GitHub Releases](https://github.com/cosZone/MoePeek/releases) and drag `MoePeek.app` into `/Applications`.
 
 ## Usage
 
@@ -86,7 +102,7 @@ Then relaunch the app.
 
 ## Acknowledgements
 
-MoePeek was inspired by excellent projects in the macOS translation space, including [Easydict](https://github.com/tisfeng/Easydict) and [Bob](https://github.com/ripperhe/Bob). Thank you for paving the way.
+MoePeek was inspired by [Easydict](https://github.com/tisfeng/Easydict) and [Bob](https://github.com/ripperhe/Bob). Thank you for paving the way.
 
 Built with:
 

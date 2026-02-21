@@ -13,6 +13,8 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/cosZone/MoePeek/releases/latest"><img src="https://img.shields.io/github/v/release/cosZone/MoePeek" alt="GitHub Release" /></a>
+  <a href="https://github.com/cosZone/MoePeek/releases"><img src="https://img.shields.io/github/downloads/cosZone/MoePeek/total" alt="Downloads" /></a>
   <img src="https://img.shields.io/badge/platform-macOS%2014%2B-blue" alt="Platform" />
   <img src="https://img.shields.io/badge/swift-6.0-orange" alt="Swift" />
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0-green" alt="License" /></a>
@@ -20,26 +22,40 @@
 
 ## 功能
 
+**翻译方式**
+
 - **划词翻译** — 在任意应用中选中文字，浮窗即时展示翻译结果
 - **OCR 截图翻译** — 框选屏幕区域，识别并翻译其中的文字
 - **剪贴板翻译** — 一键翻译剪贴板中的内容
 - **手动输入** — 输入或粘贴文字进行翻译
-- **多服务支持** — OpenAI 兼容 API 及 Apple 翻译（macOS 15+，离线可用）
-- **智能语言检测** — 自动识别 14 种语言，智能切换翻译方向
-- **非激活浮窗** — 翻译面板永远不会抢走你当前应用的焦点
-- **三层文本抓取** — Accessibility API → AppleScript → 剪贴板逐级回退
-- **自定义快捷键** — 每个操作都可自由配置快捷键
-- **自动更新** — 内置 Sparkle 更新器，始终保持最新版本
+
+**内置翻译服务**
+
+| 免费 | API | LLM | 系统 |
+|------|-----|-----|------|
+| Google 翻译 | DeepL | OpenAI | Apple 翻译 |
+| Bing 翻译 | 百度翻译 | DeepSeek | *（macOS 15+，离线可用）* |
+| | 小牛翻译 | 智谱 GLM | |
+| | 彩云小译 | Ollama（本地） | |
+
+**更多特性**
+
+- 智能语言检测，支持 14 种语言，自动切换翻译方向
+- 非激活浮窗，永远不会抢走当前应用焦点
+- 三层文本抓取：Accessibility API → AppleScript → 剪贴板逐级回退
+- 所有快捷键均可自定义
+- 内置 Sparkle 自动更新
 
 ## 为什么选择 MoePeek
 
-- **纯原生开发** — Swift + SwiftUI + AppKit 构建，没有 Electron，没有 WebView，没有额外运行时开销。
-- **轻量稳定** — 极小的内存占用，长时间运行依然稳定流畅。
+- **约 5 MB 安装体积** — 纯 Swift 6 构建，仅 3 个依赖。没有 Electron，没有 WebView。
+- **约 50 MB 后台内存** — 系统性防控内存泄漏，长时间挂后台也稳定。
 - **注重隐私** — Apple 翻译完全在设备端运行，API Key 安全存储于 macOS 钥匙串。
+- **开源项目** — AGPL-3.0 协议，欢迎提 Issue 和反馈。
 
 ## 安装
 
-从 [GitHub Releases](https://github.com/yusixian/MoePeek/releases) 下载最新的 `.dmg` 或 `.zip`，将 `MoePeek.app` 拖入 `/Applications`。
+从 [GitHub Releases](https://github.com/cosZone/MoePeek/releases) 下载最新的 `.dmg` 或 `.zip`，将 `MoePeek.app` 拖入 `/Applications`。
 
 ## 使用
 
@@ -86,7 +102,7 @@ defaults delete com.nahida.MoePeek
 
 ## 致谢
 
-MoePeek 的诞生受到了 [Easydict](https://github.com/tisfeng/Easydict) 和 [Bob](https://github.com/ripperhe/Bob) 等优秀项目的启发，感谢这些项目的开拓与贡献。
+MoePeek 的诞生受到了 [Easydict](https://github.com/tisfeng/Easydict) 和 [Bob](https://github.com/ripperhe/Bob) 的启发，感谢这些项目的开拓与贡献。
 
 依赖库：
 

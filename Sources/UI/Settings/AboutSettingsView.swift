@@ -52,12 +52,12 @@ struct AboutSettingsView: View {
             Spacer()
 
             HStack(spacing: 16) {
-                Link(destination: URL(string: "https://github.com/yusixian/MoePeek/issues")!) {
+                Link(destination: URL(string: "https://github.com/cosZone/MoePeek/issues")!) {
                     Label("Issue Feedback", systemImage: "ladybug")
                 }
                 .buttonStyle(.link)
 
-                Link(destination: URL(string: "https://github.com/yusixian/MoePeek/discussions")!) {
+                Link(destination: URL(string: "https://github.com/cosZone/MoePeek/discussions")!) {
                     Label("Community Discussions", systemImage: "bubble.left.and.bubble.right")
                 }
                 .buttonStyle(.link)
