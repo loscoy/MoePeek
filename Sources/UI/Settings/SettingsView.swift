@@ -7,6 +7,14 @@ struct SettingsView: View {
 
     @Default(.selectedSettingsTab) private var selectedTab
 
+    private var tabHeight: CGFloat {
+        switch selectedTab {
+        case .general: return 680
+        case .services: return 580
+        case .about: return 420
+        }
+    }
+
     var body: some View {
         TabView(selection: $selectedTab) {
             GeneralSettingsView()
@@ -27,7 +35,6 @@ struct SettingsView: View {
                 }
                 .tag(SettingsTab.about)
         }
-        .frame(minWidth: 550, idealWidth: 600, maxWidth: 800,
-               minHeight: 400, idealHeight: 480, maxHeight: 700)
+        .frame(width: 680, height: tabHeight)
     }
 }

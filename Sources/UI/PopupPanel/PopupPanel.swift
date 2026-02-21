@@ -29,7 +29,7 @@ final class PopupPanel: NSPanel {
         isOpaque = false
         backgroundColor = .clear
         hidesOnDeactivate = false
-        isMovableByWindowBackground = true
+        isMovableByWindowBackground = false
         collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
 
         isReleasedWhenClosed = false
@@ -44,4 +44,45 @@ final class PopupPanel: NSPanel {
 
     // Allow becoming key window so users can select/copy text within the panel.
     override var canBecomeKey: Bool { true }
+
+    // MARK: - Selective Window Dragging
+
+    /// Intercepts left-mouse-down on non-interactive areas to start a window drag,
+    /// while letting interactive controls (text views, buttons, gesture views) handle events normally.
+    override func sendEvent(_ event: NSEvent) {
+        if event.type == .leftMouseDown, shouldStartWindowDrag(for: event) {
+            performDrag(with: event)
+            return
+        }
+        super.sendEvent(event)
+    }
+
+    private func shouldStartWindowDrag(for event: NSEvent) -> Bool {
+        guard let contentView else { return true }
+        let point = contentView.convert(event.locationInWindow, from: nil)
+        guard let hitView = contentView.hitTest(point) else { return true }
+
+        // Walk up the view hierarchy: any standard AppKit control that refuses
+        // mouseDownCanMoveWindow means the user is interacting with it.
+        var view: NSView? = hitView
+        while let v = view, v !== contentView {
+            if !v.mouseDownCanMoveWindow { return false }
+            view = v.superview
+        }
+
+        // Check if the click lands on an InteractiveMarkerView (SwiftUI gesture views).
+        let windowPoint = event.locationInWindow
+        return !hasInteractiveMarker(in: contentView, containing: windowPoint)
+    }
+
+    private func hasInteractiveMarker(in view: NSView, containing point: NSPoint) -> Bool {
+        if let marker = view as? InteractiveMarkerView {
+            let rect = marker.convert(marker.bounds, to: nil)
+            if rect.contains(point) { return true }
+        }
+        for subview in view.subviews {
+            if hasInteractiveMarker(in: subview, containing: point) { return true }
+        }
+        return false
+    }
 }

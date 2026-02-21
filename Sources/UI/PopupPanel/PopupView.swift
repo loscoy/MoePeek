@@ -253,6 +253,7 @@ private struct ResizeGripView: View {
                 NSCursor.arrow.set()
             }
         }
+        .background { InteractiveMarker() }
     }
 }
 
@@ -266,25 +267,31 @@ private struct DraggableDividerView: View {
     let maxHeight: CGFloat
     let onDragEnd: () -> Void
 
+    @State private var dragStartMouse: CGFloat?
     @State private var dragStartHeight: CGFloat?
     @State private var isHovering = false
 
     var body: some View {
         Divider()
             .padding(.horizontal, 10)
-            .frame(height: 5)
+            .frame(height: 8)
             .contentShape(Rectangle())
             .gesture(
                 DragGesture(minimumDistance: 1)
-                    .onChanged { value in
-                        if dragStartHeight == nil {
+                    .onChanged { _ in
+                        let mouseY = NSEvent.mouseLocation.y
+                        if dragStartMouse == nil {
+                            dragStartMouse = mouseY
                             dragStartHeight = inputHeight
                         }
-                        guard let start = dragStartHeight else { return }
-                        let newHeight = start + value.translation.height
+                        guard let startY = dragStartMouse, let startH = dragStartHeight else { return }
+                        // Screen Y points up; dragging down decreases mouseY but should increase inputHeight
+                        let delta = startY - mouseY
+                        let newHeight = startH + delta
                         inputHeight = min(max(newHeight, minHeight), maxHeight)
                     }
                     .onEnded { _ in
+                        dragStartMouse = nil
                         dragStartHeight = nil
                         onDragEnd()
                     }
@@ -302,5 +309,20 @@ private struct DraggableDividerView: View {
                     NSCursor.pop()
                 }
             }
+            .background { InteractiveMarker() }
     }
+}
+
+// MARK: - Interactive Marker
+
+/// NSView marker placed as `.background()` on SwiftUI gesture views.
+/// `PopupPanel.sendEvent` checks for this marker to prevent window dragging
+/// over areas that handle their own drag gestures (divider, resize grip).
+final class InteractiveMarkerView: NSView {
+    override var mouseDownCanMoveWindow: Bool { false }
+}
+
+private struct InteractiveMarker: NSViewRepresentable {
+    func makeNSView(context: Context) -> InteractiveMarkerView { InteractiveMarkerView() }
+    func updateNSView(_: InteractiveMarkerView, context: Context) {}
 }

@@ -14,5 +14,6 @@ struct MoePeekApp: App {
         Settings {
             SettingsView(registry: appDelegate.registry, updaterController: appDelegate.updaterController)
         }
+        .windowResizability(.contentSize)
     }
 }
