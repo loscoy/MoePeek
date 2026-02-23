@@ -82,7 +82,8 @@ enum ScreenCaptureOCR {
             }
 
             request.recognitionLevel = .accurate
-            request.recognitionLanguages = ["zh-Hans", "zh-Hant", "en", "ja", "ko"]
+            request.automaticallyDetectsLanguage = true
+            request.recognitionLanguages = ["zh-Hans", "zh-Hant", "en-US", "ja-JP", "ko-KR"]
             request.usesLanguageCorrection = true
 
             let handler = VNImageRequestHandler(cgImage: image, options: [:])
