@@ -9,9 +9,10 @@ final class UpdaterController {
 
     private(set) var canCheckForUpdates = false
 
-    var automaticallyChecksForUpdates: Bool {
-        get { sparkleController.updater.automaticallyChecksForUpdates }
-        set { sparkleController.updater.automaticallyChecksForUpdates = newValue }
+    var automaticallyChecksForUpdates: Bool = false {
+        didSet {
+            sparkleController.updater.automaticallyChecksForUpdates = automaticallyChecksForUpdates
+        }
     }
 
     init() {
@@ -20,6 +21,7 @@ final class UpdaterController {
             updaterDelegate: nil,
             userDriverDelegate: nil
         )
+        automaticallyChecksForUpdates = sparkleController.updater.automaticallyChecksForUpdates
         canCheckForUpdates = sparkleController.updater.canCheckForUpdates
 
         cancellable = sparkleController.updater

@@ -50,6 +50,12 @@ User Action (shortcut / mouse selection / OCR)
 - **Coordinator pattern**: `TranslationCoordinator` owns all translation logic and exposes a single `State` enum consumed by views.
 - **Callback wiring in AppDelegate**: `AppDelegate.setupSelectionMonitor()` wires together SelectionMonitor → TriggerIconController → TranslationCoordinator → PopupPanelController via closures.
 - **3-tier text grabbing**: `AccessibilityGrabber` (AX API) → `AppleScriptGrabber` (Safari-specific) → `ClipboardGrabber` (⌘+C simulation). Each tier tried in order.
+- **@Observable and computed properties**: `@Observable` only tracks **stored properties**; computed property setters generate no observation notifications.
+  - ❌ **Never** wrap "write to external state" logic as a computed property on an `@Observable` class and expose it as a SwiftUI binding — the classic symptom is a Toggle/Picker that appears frozen (the value is written, but the view never re-renders).
+    - Broken: `var foo: Bool { get { ext.foo } set { ext.foo = newValue } }`
+  - ✅ **Fix**: use a stored property + `didSet` to sync outward, initialized from the external source in `init()`.
+    - `var foo: Bool = false { didSet { ext.foo = foo } }` + `init() { foo = ext.foo }`
+  - ✅ **Safe**: read-only computed properties derived from stored properties — access tracking propagates through them correctly.
 
 ### Source Layout
 
