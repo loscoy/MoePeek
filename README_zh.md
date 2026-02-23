@@ -58,6 +58,15 @@
 - **注重隐私**：Apple 翻译完全在设备端运行。
 - **开源项目**：AGPL-3.0 协议，欢迎提 Issue 和反馈。
 
+## 局限性与替代方案
+
+MoePeek 是一个纯 **AI vibe coding** 的自用项目。它能满足我个人的使用需求，但并不追求做成一个完善的商业级产品——划词、窗口交互中有大量的 edge case，商业工具花了多年时间才踩完这些坑，MoePeek 肯定还漏掉了不少。
+
+如果你需要更健壮的解决方案，以下工具非常优秀：
+
+- **[Clicknow](https://clicknow.ai/)** — 功能丰富、持续维护的划词翻译工具
+- **[PopClip](https://www.popclip.app/)** — macOS 划词操作的标杆之作，拥有丰富的插件生态
+
 ## 安装
 
 从 [GitHub Releases](https://github.com/cosZone/MoePeek/releases) 下载最新的 `.dmg` 或 `.zip`，将 `MoePeek.app` 拖入 `/Applications`。

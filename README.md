@@ -57,6 +57,15 @@
 - **Privacy-friendly**: Apple Translation runs entirely on-device.
 - **Open source**: AGPL-3.0 licensed. Issues and feedback welcome.
 
+## Limitations & Alternatives
+
+MoePeek is a personal, **AI vibe-coded** side project. It works well for my own use cases, but it's not designed to be a polished, production-grade tool — there are plenty of edge cases in text selection and window handling that commercial tools have spent years ironing out, and MoePeek likely misses many of them.
+
+If you need a more robust solution, these apps are excellent:
+
+- **[Clicknow](https://clicknow.ai/)** — feature-rich, actively maintained selection translator
+- **[PopClip](https://www.popclip.app/)** — the gold standard for macOS text selection actions, with a rich extension ecosystem
+
 ## Installation
 
 Download the latest `.dmg` or `.zip` from [GitHub Releases](https://github.com/cosZone/MoePeek/releases) and drag `MoePeek.app` into `/Applications`.
