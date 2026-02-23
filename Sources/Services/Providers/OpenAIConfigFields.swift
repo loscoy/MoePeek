@@ -26,24 +26,6 @@ struct OpenAIConfigFields: View {
         self._enabledModelsState = State(initialValue: Defaults[provider.enabledModelsKey])
     }
 
-    private var baseURL: Binding<String> {
-        Binding(
-            get: { baseURLText },
-            set: { newValue in
-                baseURLText = newValue
-                Defaults[provider.baseURLKey] = newValue
-            }
-        )
-    }
-    private var apiKey: Binding<String> {
-        Binding(
-            get: { apiKeyText },
-            set: { newValue in
-                apiKeyText = newValue
-                Defaults[provider.apiKeyKey] = newValue
-            }
-        )
-    }
     private var model: Binding<String> {
         Binding(
             get: { modelText },
@@ -92,7 +74,7 @@ struct OpenAIConfigFields: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("Base URL")
                     .font(.subheadline.bold())
-                TextField(provider.baseURLKey.defaultValue, text: baseURL)
+                TextField(provider.baseURLKey.defaultValue, text: $baseURLText)
                     .textFieldStyle(.roundedBorder)
             }
 
@@ -100,7 +82,7 @@ struct OpenAIConfigFields: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text("API Key")
                     .font(.subheadline.bold())
-                SecureField("sk-...", text: apiKey)
+                SecureField("sk-...", text: $apiKeyText)
                     .textFieldStyle(.roundedBorder)
             }
 
@@ -217,8 +199,14 @@ struct OpenAIConfigFields: View {
                 model: model.wrappedValue
             )
         }
-        .onChange(of: baseURLText) { _, _ in connectionManager.clearModels() }
-        .onChange(of: apiKeyText) { _, _ in connectionManager.clearModels() }
+        .onChange(of: baseURLText) { _, newValue in
+            Defaults[provider.baseURLKey] = newValue
+            connectionManager.clearModels()
+        }
+        .onChange(of: apiKeyText) { _, newValue in
+            Defaults[provider.apiKeyKey] = newValue
+            connectionManager.clearModels()
+        }
         .onReceive(Defaults.publisher(provider.baseURLKey).map(\.newValue)) { newValue in
             if baseURLText != newValue { baseURLText = newValue }
         }

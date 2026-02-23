@@ -58,7 +58,7 @@ struct GeneralSettingsView: View {
                     .onChange(of: showInDock) { _, newValue in
                         NSApp.setActivationPolicy(newValue ? .regular : .accessory)
                         if !newValue {
-                            NSApp.activate(ignoringOtherApps: true)
+                            NSApp.activate()
                         }
                     }
             }

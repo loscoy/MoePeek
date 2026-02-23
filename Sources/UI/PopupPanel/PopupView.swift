@@ -126,9 +126,8 @@ struct PopupView: View {
                     )
 
                     Button {
-                        SettingsWindowActivation.openOrBringToFront {
-                            openSettings()
-                        }
+                        NSApp.activate()
+                        openSettings()
                         onOpenSettings?()
                     } label: {
                         Image(systemName: "gearshape")
