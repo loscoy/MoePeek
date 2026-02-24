@@ -21,7 +21,10 @@ final class PopupPanelController {
         guard let panel else { return }
 
         let cursorPos = NSEvent.mouseLocation
-        let screen = NSScreen.screens.first(where: { $0.frame.contains(cursorPos) }) ?? NSScreen.main ?? NSScreen.screens[0]
+        guard let screen = NSScreen.screens.first(where: { $0.frame.contains(cursorPos) })
+            ?? NSScreen.main
+            ?? NSScreen.screens.first
+        else { return }
         let frame = PopupPositioning.panelFrame(
             contentSize: initialSize,
             cursor: cursorPos,
@@ -39,7 +42,10 @@ final class PopupPanelController {
         guard let panel else { return }
 
         let cursorPos = NSEvent.mouseLocation
-        let screen = NSScreen.screens.first(where: { $0.frame.contains(cursorPos) }) ?? NSScreen.main ?? NSScreen.screens[0]
+        guard let screen = NSScreen.screens.first(where: { $0.frame.contains(cursorPos) })
+            ?? NSScreen.main
+            ?? NSScreen.screens.first
+        else { return }
         let visibleFrame = screen.visibleFrame
         let origin = NSPoint(
             x: visibleFrame.midX - initialSize.width / 2,

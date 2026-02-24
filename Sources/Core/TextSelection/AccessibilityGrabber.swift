@@ -21,7 +21,8 @@ enum AccessibilityGrabber {
               CFGetTypeID(focusedRef) == AXUIElementGetTypeID()
         else { return nil }
 
-        let focusedElement = focusedRef as! AXUIElement
+        // Safe: CFGetTypeID verified above; as?/as! cannot express CF type casts cleanly.
+        let focusedElement = unsafeBitCast(focusedRef, to: AXUIElement.self)
 
         var selectedValue: CFTypeRef?
         let selectResult = AXUIElementCopyAttributeValue(

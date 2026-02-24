@@ -172,11 +172,13 @@ struct LocalLLMSettingsView: View {
                     .foregroundStyle(.secondary)
             }
 
-            Section {
-                Link(destination: URL(string: config.downloadURL)!) {
-                    Label(config.downloadLabel, systemImage: "arrow.up.right.square")
+            if let downloadURL = URL(string: config.downloadURL) {
+                Section {
+                    Link(destination: downloadURL) {
+                        Label(config.downloadLabel, systemImage: "arrow.up.right.square")
+                    }
+                    .font(.caption)
                 }
-                .font(.caption)
             }
         }
         .formStyle(.grouped)

@@ -1,10 +1,20 @@
 import AppKit
 import Defaults
+import os
 
 enum ClipboardGrabber {
+    /// Prevents concurrent pasteboard access which causes EXC_BAD_ACCESS.
+    private static let isGrabbing = OSAllocatedUnfairLock(initialState: false)
+
     /// Grab selected text by simulating ⌘+C and reading the clipboard.
     /// Saves and restores the previous clipboard content.
     static func grabViaClipboard() async -> String? {
+        guard isGrabbing.withLock({ val in
+            if val { return false }
+            val = true
+            return true
+        }) else { return nil }
+        defer { isGrabbing.withLock { $0 = false } }
         let pasteboard = NSPasteboard.general
         let previousCount = pasteboard.changeCount
         // Save current clipboard contents

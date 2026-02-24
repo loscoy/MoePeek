@@ -14,11 +14,13 @@ final class SelectionMonitor {
     private var mouseDownPoint: CGPoint?
     private var isSuppressed = false
     nonisolated(unsafe) private var suppressTask: Task<Void, Never>?
+    private var grabTask: Task<Void, Never>?
 
     deinit {
         if let monitor = mouseDownMonitor { NSEvent.removeMonitor(monitor) }
         if let monitor = globalMonitor { NSEvent.removeMonitor(monitor) }
         suppressTask?.cancel()
+        grabTask?.cancel()
     }
 
     func start() {
@@ -51,6 +53,8 @@ final class SelectionMonitor {
         }
         suppressTask?.cancel()
         suppressTask = nil
+        grabTask?.cancel()
+        grabTask = nil
     }
 
     /// Suppress detection for 0.5s — called after dismissing popup/icon to prevent re-trigger.
@@ -77,10 +81,11 @@ final class SelectionMonitor {
         }
         mouseDownPoint = nil
 
-        Task { @MainActor [weak self] in
+        grabTask?.cancel()
+        grabTask = Task { @MainActor [weak self] in
             // Wait 100ms for the target app to update its AX selection state
             try? await Task.sleep(for: .milliseconds(100))
-            guard let self else { return }
+            guard let self, !Task.isCancelled else { return }
 
             // Tier 1: Accessibility API — fast, non-invasive
             if let text = AccessibilityGrabber.grabSelectedText(),
@@ -98,6 +103,8 @@ final class SelectionMonitor {
                 self.onTextSelected?(text, point)
                 return
             }
+
+            guard !Task.isCancelled else { return }
 
             // Tier 3: Clipboard — simulate ⌘C, read pasteboard, restore
             if let text = await ClipboardGrabber.grabViaClipboard(),
