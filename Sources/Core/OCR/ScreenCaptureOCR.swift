@@ -12,11 +12,16 @@ enum ScreenCaptureOCR {
         }
     }
     /// Launch interactive screen capture, OCR the captured image, and return recognized text.
-    @MainActor static func captureAndRecognize() async throws -> String {
-        // Run screencapture -i -c (interactive selection → clipboard)
+    static func captureAndRecognize() async throws -> String {
+        // Generate a unique temp file path to avoid concurrency conflicts
+        let tmpURL = URL(fileURLWithPath: NSTemporaryDirectory())
+            .appendingPathComponent("moepeek_ocr_\(UUID().uuidString).png")
+        defer { try? FileManager.default.removeItem(at: tmpURL) }
+
+        // Run screencapture -i <tmpPath> (interactive selection → temp file, clipboard untouched)
         let process = Process()
         process.executableURL = URL(fileURLWithPath: "/usr/sbin/screencapture")
-        process.arguments = ["-i", "-c"]
+        process.arguments = ["-i", tmpURL.path]
 
         let status = try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Int32, Error>) in
@@ -42,14 +47,13 @@ enum ScreenCaptureOCR {
             throw OCRError.captureCancelled
         }
 
-        // Read image from clipboard and perform OCR inside autoreleasepool
+        // Read image from temp file and perform OCR inside autoreleasepool
         // to ensure large screenshot images are freed promptly.
         let cgImage: CGImage = try autoreleasepool {
-            let pasteboard = NSPasteboard.general
-            guard let image = NSImage(pasteboard: pasteboard),
+            guard let image = NSImage(contentsOf: tmpURL),
                   let cg = image.cgImage(forProposedRect: nil, context: nil, hints: nil)
             else {
-                throw OCRError.noImageInClipboard
+                throw OCRError.captureReadFailed
             }
             return cg
         }
@@ -99,14 +103,14 @@ enum ScreenCaptureOCR {
 
 enum OCRError: LocalizedError {
     case captureCancelled
-    case noImageInClipboard
+    case captureReadFailed
     case noTextRecognized
 
     var errorDescription: String? {
         switch self {
-        case .captureCancelled: String(localized: "Screen capture was cancelled")
-        case .noImageInClipboard: String(localized: "No image found in clipboard after capture")
-        case .noTextRecognized: String(localized: "No text was recognized in the captured image")
+        case .captureCancelled:  String(localized: "Screen capture was cancelled")
+        case .captureReadFailed: String(localized: "Failed to read the captured image")
+        case .noTextRecognized:  String(localized: "No text was recognized in the captured image")
         }
     }
 }
