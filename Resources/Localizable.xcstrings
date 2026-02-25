@@ -1249,12 +1249,13 @@
         }
       }
     },
-    "Unified API for 200+ models, requires API Key" : {
+    "Optional" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "统一 API，支持 200+ 模型，需要配置 API Key"
+            "value" : "可选"
           }
         }
       }
@@ -1582,10 +1583,8 @@
         }
       }
     },
-    "Secret Key" : {
-
-    },
     "Search models…" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -1594,6 +1593,9 @@
           }
         }
       }
+    },
+    "Secret Key" : {
+
     },
     "Select a model" : {
       "localizations" : {
@@ -1981,6 +1983,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "翻译会话意外结束。请重试。"
+          }
+        }
+      }
+    },
+    "Unified API for 200+ models, requires API Key" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "统一 API，支持 200+ 模型，需要配置 API Key"
           }
         }
       }
